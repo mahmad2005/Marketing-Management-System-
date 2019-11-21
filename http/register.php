@@ -17,8 +17,8 @@ $obj->MySQL();
 		echo "<p>You have successfully registered.</p>";
 		echo "<p><a href=\"./index.php\">Please Login</a></p>";
 		
-		$SQL = "INSERT INTO `iot_test`.`user_profile` (`SN`,`FullName`,`E_mail`,`UserName`,`UserPass`,`Device_ID`,`CreateDate`) VALUES 
-		('','$F_Name','$E_Mail','$U_Name','$U_Pass','$Device_ID','$TimeAndDate')";
+		 $SQL = "INSERT INTO user_profile (FullName, E_mail, UserName, UserPass, CreateDate) VALUES 
+		 ('$F_Name','$E_Mail','$U_Name','$U_Pass','$TimeAndDate')";
 		//echo $SQL;
 		$obj->sql($SQL);	
 	

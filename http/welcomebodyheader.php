@@ -1,0 +1,55 @@
+<?php
+//this has to be done bcoz cookies do not work if any html codes are placed before it. **********************
+echo '<!DOCTYPE html>';
+echo '<html>';
+echo '<head>';
+echo '<title>Welcome to iCon Switch Dashboard</title>';
+echo '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
+echo '<style>';
+echo '.myButton {';
+echo 'background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #2195f3), color-stop(1, #1488e0));';
+echo 'background:-moz-linear-gradient(top, #2195f3 5%, #1488e0 100%);';
+echo 'background:-webkit-linear-gradient(top, #2195f3 5%, #1488e0 100%);';
+echo 'background:-o-linear-gradient(top, #2195f3 5%, #1488e0 100%);';
+echo 'background:-ms-linear-gradient(top, #2195f3 5%, #1488e0 100%);';
+echo 'background:linear-gradient(to bottom, #2195f3 5%, #1488e0 100%);';
+echo 'filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=\'#2195f3\', endColorstr=\'#1488e0\',GradientType=0);';
+echo 'background-color:#2195f3;';
+echo '-moz-border-radius:28px;';
+echo '-webkit-border-radius:28px;';
+echo 'border-radius:28px;';
+echo 'border:1px solid #1488e0;';
+echo 'display:inline-block;';
+echo 'cursor:pointer;';
+echo 'color:#ffffff;';
+echo 'font-family:Arial;';
+echo 'font-size:17px;';
+echo 'padding:16px 31px;';
+echo 'text-decoration:none;';
+echo 'text-shadow:0px 1px 0px #0a68ab;';
+echo '}';
+echo '.myButton:hover {';
+echo 'background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #1488e0), color-stop(1, #2195f3));';
+echo 'background:-moz-linear-gradient(top, #1488e0 5%, #2195f3 100%);';
+echo 'background:-webkit-linear-gradient(top, #1488e0 5%, #2195f3 100%);';
+echo 'background:-o-linear-gradient(top, #1488e0 5%, #2195f3 100%);';
+echo 'background:-ms-linear-gradient(top, #1488e0 5%, #2195f3 100%);';
+echo 'background:linear-gradient(to bottom, #1488e0 5%, #2195f3 100%);';
+echo 'filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=\'#1488e0\', endColorstr=\'#2195f3\',GradientType=0);';
+echo 'background-color:#1488e0;';
+echo '}';
+echo '.myButton:active {';
+echo 'position:relative;';
+echo 'top:1px;';
+echo '}';
+echo '@media only screen and (min-width:200px) and (max-width: 500px) {';
+echo 'body {';
+echo 'background-color: #FFFFFF;';
+echo 'width: 320px;';
+echo '}';
+echo '}';
+echo '</style>';
+echo '</head>';
+echo '</body>';
+
+?>
