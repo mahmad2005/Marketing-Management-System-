@@ -22,13 +22,15 @@ if(isset($_COOKIE["U_Name"], $_COOKIE["U_Pass"]))
 		echo	$Q[]  = $_POST["Q_5"];
 			$TimeAndDate = date("Y-m-d H:i:s");
 			
+		 $Company_Serial_ID = mysqli_fetch_array($obj->sql("SELECT*FROM company_info ORDER BY SN DESC LIMIT 1"));
+		 $C_Serial = $Company_Serial_ID['SN'];
 			
 			for ($x = 0; $x <= 4; $x++) {
 			$product = $P[$x];
 			$Quantity = $Q[$x];
-				echo "The number is: $x <br>";
+				echo "The order number is: $C_Serial <br>";
 				$SQL = "INSERT INTO Products (Product_Name, Product_Quantity, 	Serial_ID ) VALUES 
-				('$product ','$Quantity','3')";
+				('$product ','$Quantity','$C_Serial')";
 				$obj->sql($SQL);
 				}
 			//echo $SQL;
