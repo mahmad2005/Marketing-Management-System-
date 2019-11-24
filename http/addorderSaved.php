@@ -20,15 +20,25 @@ if(isset($_COOKIE["U_Name"], $_COOKIE["U_Pass"]))
 		echo	$Q[] = $_POST["Q_3"];
 		echo	$Q[]  = $_POST["Q_4"];
 		echo	$Q[]  = $_POST["Q_5"];
+		
+		for($i=0; $i <=5; $i++){
+			echo $P[$i];
+			echo " - ";
+			echo $Q[$i];
+			echo "<br>";
+		}
 			$TimeAndDate = date("Y-m-d H:i:s");
 			
 		 $Company_Serial_ID = mysqli_fetch_array($obj->sql("SELECT*FROM company_info ORDER BY SN DESC LIMIT 1"));
 		 $C_Serial = $Company_Serial_ID['SN'];
+		 echo $Company_Serial_ID['C_Name'] . "<br>";
+		 echo $Company_Serial_ID['C_Phone'] . "<br>";
+		 echo $Company_Serial_ID['C_Address'] . "<br>";
+		 echo "The order number is: $C_Serial <br>";
 			
 			for ($x = 0; $x <= 4; $x++) {
 			$product = $P[$x];
 			$Quantity = $Q[$x];
-				echo "The order number is: $C_Serial <br>";
 				$SQL = "INSERT INTO Products (Product_Name, Product_Quantity, 	Serial_ID ) VALUES 
 				('$product ','$Quantity','$C_Serial')";
 				$obj->sql($SQL);
