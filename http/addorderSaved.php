@@ -10,31 +10,33 @@ if(isset($_COOKIE["U_Name"], $_COOKIE["U_Pass"]))
 	$obj->MySQL();
 
 		if($_POST == TRUE){
-		echo 	$P[] = $_POST["P_1"];
-		echo	$P[] = $_POST["P_2"];
-		echo	$P[]= $_POST["P_3"];
-		echo	$P[] = $_POST["P_4"];
-		echo	$P[] = $_POST["P_5"];
-		echo	$Q[] = $_POST["Q_1"];
-		echo	$Q[] = $_POST["Q_2"];
-		echo	$Q[] = $_POST["Q_3"];
-		echo	$Q[]  = $_POST["Q_4"];
-		echo	$Q[]  = $_POST["Q_5"];
+			$P[] = $_POST["P_1"];
+			$P[] = $_POST["P_2"];
+			$P[]= $_POST["P_3"];
+			$P[] = $_POST["P_4"];
+			$P[] = $_POST["P_5"];
+			$Q[] = $_POST["Q_1"];
+			$Q[] = $_POST["Q_2"];
+			$Q[] = $_POST["Q_3"];
+			$Q[]  = $_POST["Q_4"];
+			$Q[]  = $_POST["Q_5"];
 		
-		for($i=0; $i <=5; $i++){
-			echo $P[$i];
-			echo " - ";
-			echo $Q[$i];
-			echo "<br>";
-		}
-			$TimeAndDate = date("Y-m-d H:i:s");
+	    echo $TimeAndDate = date("Y-m-d H:i:s");
+		echo "<br>";
 			
-		 $Company_Serial_ID = mysqli_fetch_array($obj->sql("SELECT*FROM company_info ORDER BY SN DESC LIMIT 1"));
-		 $C_Serial = $Company_Serial_ID['SN'];
-		 echo $Company_Serial_ID['C_Name'] . "<br>";
-		 echo $Company_Serial_ID['C_Phone'] . "<br>";
-		 echo $Company_Serial_ID['C_Address'] . "<br>";
+		 $Company_info = mysqli_fetch_array($obj->sql("SELECT*FROM company_info ORDER BY SN DESC LIMIT 1"));
+		 $C_Serial = $Company_info['SN'];
+		 echo "<h1>" . $Company_info['C_Name'] . "</h1><br>";
+		 echo $Company_info['C_Phone'] . "<br>";
+		 echo $Company_info['C_Address'] . "<br>";
 		 echo "The order number is: $C_Serial <br>";
+		 
+		for($i=0; $i <=5; $i++){
+				echo $P[$i];
+				echo " - ";
+				echo $Q[$i];
+				echo "<br>";
+			}
 			
 			for ($x = 0; $x <= 4; $x++) {
 			$product = $P[$x];
@@ -44,6 +46,8 @@ if(isset($_COOKIE["U_Name"], $_COOKIE["U_Pass"]))
 				$obj->sql($SQL);
 				}
 			//echo $SQL;
+			
+			echo "<p><a href=\"./welcome.php\">Dashboard</a></p></center>";
 
 ?>
 

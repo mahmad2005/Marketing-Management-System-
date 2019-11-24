@@ -26,6 +26,7 @@ include "welcomebodyheader.php"; //this has to be done bcoz cookies do not work 
 	include "welcomebodyheader.php";
 		echo "<center><p>Welcome again</p>";
 		echo "<p><a href=\"./addorder.php\" class=\"myButton\">Add Order</a></p>";
+		echo "<p><a href=\"./visitedcompanies.php\" class=\"myButton\">Show visited Companies</a></p>";
 		echo "<p><a href=\"./logout.php\">Logout</a></p></center>";
 	}
 echo '</body>';
